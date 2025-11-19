@@ -34,7 +34,7 @@ const Header = () => {
                 <span className="inline-block transition-transform duration-200 hover:translate-y-[-1px]">
                   {item.label}
                 </span>
-                <span className="absolute left-0 -bottom-1 w-0 group-hover:w-full h-[2px] bg-gold transition-all" />
+                <span className="absolute left-0 -bottom-1 w-0 hover:w-full h-[2px] bg-gold transition-all" />
               </a>
             ))}
             <Button className="bg-gold hover:bg-gold-dark text-primary transition-transform hover:scale-[1.02] relative overflow-hidden">

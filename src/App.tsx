@@ -7,12 +7,12 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import heroImage from "@/assets/hero-image.jpg";
 
+
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider delayDuration={200}>
-      <Toaster richColors theme="light" />
       <Sonner position="bottom-right" />
       {/* Animated background overlay */}
       <div
