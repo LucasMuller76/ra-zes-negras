@@ -15,7 +15,7 @@ const PersonalityCard = ({ name, description, fullBio, imagePlaceholder }: Perso
   return (
     <>
       <Card 
-        className="cursor-pointer hover:shadow-lg transition-all hover:-translate-y-2 duration-300 border-border bg-card"
+        className="cursor-pointer hover:shadow-lg transition-all hover:-translate-y-2 duration-300 border-border bg-card hover:scale-[1.01]"
         onClick={() => setIsOpen(true)}
       >
         <CardContent className="p-6 text-center">

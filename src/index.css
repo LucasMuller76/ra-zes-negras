@@ -85,3 +85,60 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .animated-bg-image {
+    position: fixed;
+    inset: 0;
+    z-index: 0; /* ensure visible behind content */
+    pointer-events: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 250%;
+    filter: blur(8px) saturate(115%);
+    animation: bg-zoom 36s ease-in-out infinite alternate;
+    transform: translateZ(0);
+  }
+
+  @keyframes bg-zoom {
+    0% {
+      background-size: 230%;
+      background-position: 50% 50%;
+      transform: scale(1.02);
+    }
+    50% {
+      background-size: 260%;
+      background-position: 48% 52%;
+      transform: scale(1.06);
+    }
+    100% {
+      background-size: 270%;
+      background-position: 52% 48%;
+      transform: scale(1.08);
+    }
+  }
+
+  .animated-shimmer {
+    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.12), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 12s linear infinite;
+  }
+  @keyframes shimmer {
+    0% { background-position-x: 0%; }
+    100% { background-position-x: 200%; }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease both;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  main, section, header, footer {
+    animation: fadeIn 0.7s ease both;
+  }
+}

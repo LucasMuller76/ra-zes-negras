@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PersonalityCard from "@/components/PersonalityCard";
 import Timeline from "@/components/Timeline";
-import ContactForm from "@/components/ContactForm";
+
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import africanCivilization from "@/assets/african-civilization.jpg";
@@ -535,8 +535,6 @@ Foi candidata a deputada federal em 1982 e 1986. Sua contribuição teórica e a
         </div>
       </section>
 
-      {/* Contato */}
-      <ContactForm />
 
       <Footer />
     </div>

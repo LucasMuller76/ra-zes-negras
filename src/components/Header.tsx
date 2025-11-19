@@ -13,7 +13,6 @@ const Header = () => {
     { label: "Linha do Tempo", href: "#timeline" },
     { label: "Galeria", href: "#galeria" },
     { label: "Recursos", href: "#recursos" },
-    { label: "Contato", href: "#contato" },
   ];
 
   return (
@@ -30,12 +29,16 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground hover:text-gold transition-colors"
+                className="text-sm font-medium text-foreground hover:text-gold transition-colors relative"
               >
-                {item.label}
+                <span className="inline-block transition-transform duration-200 hover:translate-y-[-1px]">
+                  {item.label}
+                </span>
+                <span className="absolute left-0 -bottom-1 w-0 group-hover:w-full h-[2px] bg-gold transition-all" />
               </a>
             ))}
-            <Button className="bg-gold hover:bg-gold-dark text-primary">
+            <Button className="bg-gold hover:bg-gold-dark text-primary transition-transform hover:scale-[1.02] relative overflow-hidden">
+              <span className="absolute inset-0 animated-shimmer opacity-0 hover:opacity-100 transition-opacity" />
               Saiba Mais
             </Button>
           </div>
@@ -62,7 +65,8 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <Button className="bg-gold hover:bg-gold-dark text-primary mt-2">
+            <Button className="bg-gold hover:bg-gold-dark text-primary mt-2 transition-transform hover:scale-[1.02] relative overflow-hidden">
+              <span className="absolute inset-0 animated-shimmer opacity-0 hover:opacity-100 transition-opacity" />
               Saiba Mais
             </Button>
           </div>

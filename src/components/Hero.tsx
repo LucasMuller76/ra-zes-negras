@@ -24,12 +24,16 @@ const Hero = () => {
         </p>
         <Button 
           size="lg" 
-          className="bg-gold hover:bg-gold-dark text-primary font-semibold text-lg px-8 py-6"
+          className="bg-gold hover:bg-gold-dark text-primary font-semibold text-lg px-8 py-6 transition-transform duration-300 hover:scale-[1.03] relative overflow-hidden"
           onClick={() => document.getElementById('o-que-e')?.scrollIntoView({ behavior: 'smooth' })}
         >
+          <span className="absolute inset-0 animated-shimmer opacity-0 hover:opacity-100 transition-opacity" />
           Explorar
           <ChevronDown className="ml-2" />
         </Button>
+        <p className="mt-6 text-sm md:text-base opacity-80 animate-fade-in">
+          Feito por Lucas Muller e Eduardo Gregory
+        </p>
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
